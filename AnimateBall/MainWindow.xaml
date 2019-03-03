@@ -1,0 +1,57 @@
+﻿<Window x:Class="AnimateBall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimateBall"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="700" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" ResizeMode="NoResize">
+    <Border BorderBrush="Black" BorderThickness="10">
+        <Grid>
+            <Canvas Name="myGameCanvas" Width="600" Height="500" Background="orange" Opacity="0.6">
+                <Rectangle Name="gameBall" Fill="blue"  RadiusX="50" RadiusY="50"  Width="12" Height="12" Canvas.Left="30" Canvas.Top="336" Opacity="1" />
+                <Rectangle Name="gamePaddle" Fill="black" Width="100" Height="25" Canvas.Left="246" Canvas.Top="438" Opacity="1"/>
+
+
+                <!--<Rectangle Name="a" Fill="black" Stroke="white" StrokeThickness="2"  Width="100" Height="25" Canvas.Top="122" Canvas.Left="0" Opacity="1"/>
+                <Rectangle Name="b" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="122" Opacity="1" Canvas.Left="100"/>
+                <Rectangle Name="c" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Opacity="1" Canvas.Left="200" Canvas.Top="122"/>
+                <Rectangle Name="d" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="122" Opacity="1" Canvas.Left="300"/>
+                <Rectangle Name="e" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="122" Opacity="1" Canvas.Left="400"/>
+                <Rectangle Name="f" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Opacity="1" Canvas.Left="500" Canvas.Top="122"/>
+                <Rectangle Name="g" Fill="black" Stroke="white" StrokeThickness="2"  Width="100" Height="25" Canvas.Top="97" Opacity="1" Canvas.Left="0"/>
+                <Rectangle Name="h" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="97" Opacity="1" Canvas.Left="100"/>
+                <Rectangle Name="i" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Opacity="1" Canvas.Left="200" Canvas.Top="97"/>
+                <Rectangle Name="j" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="97" Opacity="1" Canvas.Left="300"/>
+                <Rectangle Name="k" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="97" Opacity="1" Canvas.Left="400"/>
+                <Rectangle Name="l" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Opacity="1" Canvas.Left="500" Canvas.Top="97"/>
+                <Rectangle Name="m" Fill="black" Stroke="white" StrokeThickness="2"  Width="100" Height="25" Canvas.Top="72" Opacity="1" Canvas.Left="0"/>
+                <Rectangle Name="n" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="72" Opacity="1" Canvas.Left="100"/>
+                <Rectangle Name="o" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Opacity="1" Canvas.Left="200" Canvas.Top="72"/>
+                <Rectangle Name="p" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="72" Opacity="1" Canvas.Left="300"/>
+                <Rectangle Name="q" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Canvas.Top="72" Opacity="1" Canvas.Left="400"/>
+                <Rectangle Name="r" Fill="black" Stroke="white" StrokeThickness="2" Width="100" Height="25" Opacity="1" Canvas.Left="500" Canvas.Top="72"/>-->
+
+
+
+
+            </Canvas>
+            <StackPanel x:Name="PauseMenu" HorizontalAlignment="Left" Background="AntiqueWhite" Height="287" Margin="208,159,0,0" VerticalAlignment="Top" Width="269" IsEnabled="False" Visibility="Hidden">
+                <Button x:Name="Continue" Content="Continue" Width="200" Height="50" FontWeight="Bold" FontSize="20" Margin="20" Click="Continue_Click" />
+                <Button x:Name="ExitP" Content="Exit" Width="200" Height="50" FontWeight="Bold" FontSize="20" Margin="20" Click="Exit_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="MainMenu" HorizontalAlignment="Left" Background="AntiqueWhite" Height="286" Margin="208,109,0,0" VerticalAlignment="Top" Width="269" IsEnabled="true" Visibility="Hidden">
+                <Label x:Name="level" Content="Level"  Width="200" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="20" Margin="20"/>
+                <Button x:Name="Play" Content="Start" Width="200" Height="50" FontWeight="Bold" FontSize="20" Margin="34,20,35,20" Click="Start_Click" />
+                <Button x:Name="ExitM" Content="Quit" Width="200" Height="50" FontWeight="Bold" FontSize="20" Margin="20" Click="Exit_Click"/>
+            </StackPanel>
+            <Label Content="Score" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="483,10,0,0" VerticalAlignment="Top" Height="34" Width="66"/>
+            <Label x:Name="scoreCard" Content="" HorizontalAlignment="Left" Margin="549,10,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="34" Width="44"/>
+            <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="89" Height="32" Click="Start_Click"/>
+            <Button x:Name="pause" Content="Pause" HorizontalAlignment="Left" Margin="121,10,0,0" VerticalAlignment="Top" Width="89" Height="32" Click="Pause_Click"/>
+            <Label Content="High Score:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="243,10,0,0" VerticalAlignment="Top" Height="32" Width="75"/>
+            <Label x:Name="highscore" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="318,10,0,0" VerticalAlignment="Top" Height="32" Width="42"/>
+
+        </Grid>
+    </Border>
+</Window>
